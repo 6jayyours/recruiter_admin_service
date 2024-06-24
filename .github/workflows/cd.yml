@@ -16,4 +16,4 @@ jobs:
       - name: delete old docker image
         run:  docker rm -f admin-service || true
       - name: run docker container
-        run:  docker run -d -p 8083:8083 --name admin-service --network recruiter-net marjunr/recruiter-admin-service
+        run:  docker run -d -p 8083:8083 --name admin-service --network recruiter-net marjunr/recruiter-adminservice
