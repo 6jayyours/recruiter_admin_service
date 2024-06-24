@@ -4,10 +4,8 @@ import com.recruiter.admin_service.dto.UserDTO;
 import com.recruiter.admin_service.feign.AuthClient;
 import com.recruiter.admin_service.model.Role;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -27,4 +25,5 @@ public class AdminController {
         System.out.println(response);
         return response;
     }
+
 }
