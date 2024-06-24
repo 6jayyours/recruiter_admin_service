@@ -1,14 +1,20 @@
 package com.recruiter.admin_service.feign;
 
 import com.recruiter.admin_service.dto.UserDTO;
+import com.recruiter.admin_service.model.Role;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
 @FeignClient(name = "AUTH-SERVICE")
-public interface AuthClinet {
+public interface AuthClient {
+
     @GetMapping("/api/v1/user/users")
-    public ResponseEntity<List<UserDTO>> getAllUsers();
+    ResponseEntity<List<UserDTO>> getAllUsers(@RequestParam Role role);
+
+
+
 }
