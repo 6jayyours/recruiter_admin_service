@@ -34,4 +34,10 @@ public class AdminController {
         return response;
     }
 
+    @PutMapping("/activate/{id}")
+    public ResponseEntity<String> activateUserStatus(@PathVariable Integer id) {
+        authClient.activateUser(id);
+        return ResponseEntity.ok("User status Changed");
+    }
+
 }
