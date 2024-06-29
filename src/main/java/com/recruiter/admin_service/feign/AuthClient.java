@@ -18,4 +18,6 @@ public interface AuthClient {
     @PutMapping("api/v1/user/activate/{id}")
     ResponseEntity<String> activateUser(@PathVariable Integer id);
 
+
+
 }
