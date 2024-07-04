@@ -16,5 +16,6 @@ public class UserDTO {
     private boolean status;
     private boolean subscription;
     private String idImageUrl;
+    private String profileImageUrl;
     private LocalDateTime registrationDate;
 }
