@@ -1,5 +1,6 @@
 package com.recruiter.admin_service.controller;
 
+import com.recruiter.admin_service.dto.ApplicationDTO;
 import com.recruiter.admin_service.dto.JobDTO;
 import com.recruiter.admin_service.dto.UserDTO;
 import com.recruiter.admin_service.feign.AuthClient;
@@ -33,6 +34,14 @@ public class AdminController {
         ResponseEntity<List<JobDTO>> response = jobClient.getAllJobs();
         return response;
     }
+
+    @GetMapping("/apps")
+    public ResponseEntity<List<ApplicationDTO>> getAllApps() {
+        ResponseEntity<List<ApplicationDTO>> response = jobClient.getAllApps();
+        return response;
+    }
+
+
 
     @PutMapping("/activate/{id}")
     public ResponseEntity<String> activateUserStatus(@PathVariable Integer id) {

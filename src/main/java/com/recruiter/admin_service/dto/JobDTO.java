@@ -28,4 +28,5 @@ public class JobDTO {
     private String requirements;
     private String responsibilities;
     private String posted;
+    private String status;
 }
