@@ -16,7 +16,7 @@ public interface AuthClient {
     ResponseEntity<List<UserDTO>> getAllUsers(@RequestParam Role role);
 
     @PutMapping("api/v1/user/activate/{id}")
-    ResponseEntity<String> activateUser(@PathVariable Integer id);
+    ResponseEntity<String> activateUser(@PathVariable Integer id, @RequestParam String reason);
 
 
 
