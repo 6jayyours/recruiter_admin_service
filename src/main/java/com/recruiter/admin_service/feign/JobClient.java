@@ -10,7 +10,7 @@ import java.util.List;
 
 @FeignClient(name = "JOBS-SERVICE")
 public interface JobClient {
-    @GetMapping("/api/v1/jobs/getAllJobs")
+    @GetMapping("/api/v1/jobs/getAllJobsAdmin")
     ResponseEntity<List<JobDTO>> getAllJobs();
 
     @GetMapping("/api/v1/jobs/getAllApps")
